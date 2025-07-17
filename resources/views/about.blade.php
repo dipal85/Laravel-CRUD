@@ -10,6 +10,7 @@
             <li>✅ Resource Controller</li>
             <li>✅ Invokable Controller</li>
             <li>✅ API Resource Controller</li>
+            <li>✅ API Resource Manager</li>
         </ul>
     </div>
 @endsection
