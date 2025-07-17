@@ -26,6 +26,7 @@
             <td>{{ $car->car_price }}</td>
             <td>{{ $car->car_details }}</td>
             <td>
+                 @if(auth()->user()->is_admin)
                 <a href="{{ route('cars.show', $car) }}" class="btn btn-info btn-sm">View</a>
                 <a href="{{ route('cars.edit', $car) }}" class="btn btn-warning btn-sm">Edit</a>
                 <form action="{{ route('cars.destroy', $car) }}" method="POST" style="display:inline-block;">
@@ -33,6 +34,7 @@
                     @method('DELETE')
                     <button onclick="return confirm('Confirm delete?')" class="btn btn-danger btn-sm">Delete</button>
                 </form>
+                @endif
             </td>
         </tr>
         @endforeach

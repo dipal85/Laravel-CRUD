@@ -19,6 +19,10 @@ return new class extends Migration
             $table->text('car_details');
             $table->timestamps();
         });
+
+        Schema::table('users', function (Blueprint $table) {
+    $table->boolean('is_admin')->default(false);
+});
     }
 
     /**
